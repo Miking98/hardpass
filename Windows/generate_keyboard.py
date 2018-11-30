@@ -1,19 +1,42 @@
 import os
 import sys
+import random
 
 keys_to_hash = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
                 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
                 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
                 'U', 'V', 'W', 'X', 'Y', 'Z']
 
+numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
+letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
+           'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
+           'U', 'V', 'W', 'X', 'Y', 'Z',
+           'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j',
+           'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't',
+           'u', 'v', 'w', 'x', 'y', 'z']
+specials = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
+
 def hash_key(key):
     """
     Hashes the key into 3-4 "random" keys
     """
+
+    # p(3 chars) = 0.25, p(4 chars) = 0.75
+    length = 3
+    if random.random() >= 0.25:
+        length = 4
+
     rtn = ""
-    hashed_str = 'abcd'
-    for s in hashed_str:
-        rtn += "00" + s.encode("hex") + "  "
+    for _ in range(length):
+        kind = random.randint(0, 2)
+        if kind == 0:
+            c = random.choice(numbers)
+        elif kind == 1:
+            c = random.choice(letters)
+        else:
+            c = random.choice(specials)
+        rtn += "00" + c.encode("hex") + "  "
+
     return rtn
 
 if __name__ == "__main__":
