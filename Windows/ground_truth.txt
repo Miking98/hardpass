@@ -1,4 +1,4 @@
-KBD	Layout02	"CS263"
+KBD	hardpass	"HardPass"
 
 COPYRIGHT	"(c) 2018 HardPass"
 
@@ -230,7 +230,7 @@ KEYNAME_EXT
 
 DESCRIPTIONS
 
-0409	CS263
+0409	HardPass
 LANGUAGENAMES
 
 0409	English (United States)

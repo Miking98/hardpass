@@ -42,7 +42,7 @@ def hash_key(key):
 if __name__ == "__main__":
     print('Hello, world!')
     
-    fw = open("tmp.klc", "w")
+    fw = open("hardpass.klc", "w")
 
     # Write beginning
     lines_to_write = []
