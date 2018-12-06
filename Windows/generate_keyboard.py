@@ -40,8 +40,8 @@ def hash_key(key):
     return rtn
 
 if __name__ == "__main__":
-    print('Hello, world!')
-    
+    """ Script that generates a new randomized keyboard file, hardpass.klc"""
+
     fw = open("hardpass.klc", "w")
 
     # Write beginning

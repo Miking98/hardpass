@@ -34,4 +34,8 @@ if __name__ == "__main__":
         print('Move failed! Try running in Administrator Mode...')
         sys.exit()
 
-    # TODO: Add register file
+    # Add register file
+    rtn = subprocess.call("reg import {}.reg".format(keyboard_name))
+    if rtn != 0:
+        print('Register import failed!  Try running in Administrator Mode...')
+        sys.exit()
