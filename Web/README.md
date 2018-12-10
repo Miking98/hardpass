@@ -1,4 +1,4 @@
-# Installation Instructions
+# Chrome Extension Installation Instructions
 
 Note: This browser extension only works in **Google Chrome.**
 
