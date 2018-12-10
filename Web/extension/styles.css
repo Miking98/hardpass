@@ -1,0 +1,28 @@
+#content {
+	width: 250px;
+	padding: 10px;
+	font-size: 14px;
+}
+
+#login-container {
+}
+
+#loggedin-container {
+	display: none;
+}
+
+#popup-login-form input {
+	padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 2px;
+    height: 30px;
+    font-size: 14px;
+}
+
+#popup-login-form .form-group {
+	margin-bottom: 10px;
+}
+
+#popup-login-form label {
+	margin-bottom: 0px;
+}

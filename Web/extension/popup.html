@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <!-- JQUERY -->
+      <script src="jquery.min.3.3.1.js" type="text/javascript"></script>
+
+      <!-- BOOTSTRAP -->
+      <link href="bootstrap.min.css" rel="stylesheet">
+      <script src="bootstrap.min.js" type="text/javascript"></script>
+
+      <!-- LOADING ICON BUTTON -->
+      <link href="ladda.min.css" rel="stylesheet">
+      <script src="ladda.js" type="text/javascript"></script>
+
+      <!-- CUSTOM -->
+      <link href="styles.css" rel="stylesheet">
+      <script src="popup.js" type="text/javascript"></script>
+  </head>
+
+  <body>
+    <div id="content">
+      <div id="loggedin-container">
+        <h6 id="loggedin-container-header" class="text-center text-success">HardPass is Active</h6>
+        <hr>
+        <div class="row ml-auto mr-auto">
+          <button id="loggedin-disable" class="btn btn-sm btn-warning ladda-button" data-style="expand-left">Disable for this Site</button>
+          <button id="loggedin-enable" class="btn btn-sm btn-success ladda-button d-none" data-style="expand-left">Enable for this Site</button>
+          <span id="loggedin-disable-message" class="d-none">HardPass is paused for all sites, so it is also disabled for this site.</span>
+        </div>
+        <hr>
+        <div class="row ml-auto mr-auto">
+          <button id="loggedin-pause" class="btn btn-sm btn-danger ladda-button" data-style="expand-left">Pause for all Sites</button>
+          <button id="loggedin-unpause" class="btn btn-sm btn-success ladda-button d-none" data-style="expand-left">Resume</button>
+        </div>
+        <hr>
+        <div class="row ml-auto mr-auto">
+          <button id="loggedin-logout" class="btn btn-sm btn-primary ladda-button" data-style="expand-left">Logout</button>
+        </div>
+      </div>
+      <div id="login-container">
+        <form id="popup-login-form">
+            <h5 class="text-center">HardPass Login</h5>
+            <hr>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input id="popup-login-email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email" required="True">
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input id="popup-login-password" type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" required="True">
+            </div>
+            <button id="popup-login-submit" type="submit" class="btn btn-lg btn-primary float-right ladda-button" data-style="expand-left">Login</button>
+            <div class="clearfix"></div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

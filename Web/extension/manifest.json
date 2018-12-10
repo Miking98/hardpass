@@ -1,0 +1,36 @@
+{
+	"name": "HardPass Extension",
+	"version": "0.1",
+	"description": "Securitize your life",
+	"background": {
+		"scripts": ["jquery.min.3.3.1.js", "background.js"],
+		"persistent": true
+	},
+	"browser_action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "images/icon16.png",
+			"32": "images/icon32.png",
+			"48": "images/icon48.png",
+			"128": "images/icon128.png"
+		}
+	},
+	"icons": {
+		"16": "images/icon16.png",
+		"32": "images/icon32.png",
+		"48": "images/icon48.png",
+		"128": "images/icon128.png"
+	},
+	"content_scripts": [{
+		"matches": ["<all_urls>"],
+		"run_at": "document_idle",
+		"js": ["jquery.min.3.3.1.js", "contentScript.js"]
+	}],
+	"permissions": [
+        "declarativeContent",
+		"activeTab",
+		"storage"
+	],
+    "incognito" : "spanning",
+	"manifest_version": 2
+}
