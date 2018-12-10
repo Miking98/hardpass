@@ -1,3 +1,3 @@
-# US 34 Final Project: Civil War Data Analysis
+# CS 263 Final Project: HardPass Webserver
 
-By: Michael Wornow and Theo Walker
+By: Michael Wornow, Lev Grossman, Varun Jain
