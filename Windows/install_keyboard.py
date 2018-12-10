@@ -6,7 +6,7 @@ if __name__ == "__main__":
     if len(sys.argv) != 2:
         print('Usage: python install_keyboard.py keyboard.klc')
         sys.exit()
-    
+
     keyboard_file = sys.argv[1]
     keyboard_name = keyboard_file[:keyboard_file.find('.')]
 

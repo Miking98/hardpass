@@ -16,6 +16,7 @@ letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
            'u', 'v', 'w', 'x', 'y', 'z']
 specials = ['!', '@', '#', '$', '%', '^', '&', '*', '(', ')']
 
+
 def hash_key(key):
     """
     Hashes the key into 3-4 "random" keys
@@ -38,6 +39,7 @@ def hash_key(key):
         rtn += "00" + c.encode("hex") + "  "
 
     return rtn
+
 
 if __name__ == "__main__":
     """ Script that generates a new randomized keyboard file, hardpass.klc"""
