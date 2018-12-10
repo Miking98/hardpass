@@ -1,0 +1,140 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <header class="masthead">
+      <div class="container h-100">
+        <div class="row h-100">
+          <div class="col-lg-7 my-auto">
+            <div class="header-content mx-auto">
+              <h1 class="mb-5">HardPass is the most secure password manager ever invented.</h1>
+              <a href="#download" class="btn btn-outline btn-xl js-scroll-trigger">Learn More</a>
+            </div>
+          </div>
+          <div class="col-lg-5 my-auto">
+            <div class="device-container">
+              <div class="device-mockup iphone6_plus portrait white">
+                <div class="device">
+                  <div class="screen">
+                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                    <img id="index-lock_animation" src="{{ url_for('static', filename='img/lock_animation.gif') }}" class="img-fluid" alt="">
+                  </div>
+                  <div class="button">
+                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="download bg-primary text-center" id="download">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 mx-auto">
+            <h2 class="section-heading">Social + Local + Mobile (SoLoMo)</h2>
+            <p>HardPass is available as a Google Chrome extension, a Windows keyboard, and an Ubuntu keyboard. Signup now to get started!</p>
+            <a href="#features" class="btn btn-danger btn-xl js-scroll-trigger">Continue</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2>A Novel Approach to Password Management</h2>
+          <p class="text-muted">Unlike other password managers, HardPass is so secure that even we don't know your password!</p>
+          <hr>
+        </div>
+        <div class="row">
+          <div class="col-lg-4 my-auto">
+            <div class="device-container">
+              <div class="device-mockup iphone6_plus portrait white">
+                <div class="device">
+                  <div class="screen">
+                    <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                    <img src="img/demo-screen-1.jpg" class="img-fluid" alt="">
+                  </div>
+                  <div class="button">
+                    <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-8 my-auto">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-screen-smartphone text-primary"></i>
+                    <h3>Device Mockups</h3>
+                    <p class="text-muted">Ready to use HTML/CSS device mockups, no Photoshop required!</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-camera text-primary"></i>
+                    <h3>Flexible Use</h3>
+                    <p class="text-muted">Put an image, video, animation, or anything else in the screen!</p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-present text-primary"></i>
+                    <h3>Free to Use</h3>
+                    <p class="text-muted">As always, this theme is free to download and use for any purpose!</p>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="feature-item">
+                    <i class="icon-lock-open text-primary"></i>
+                    <h3>Open Source</h3>
+                    <p class="text-muted">View us on Github at</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="text-center w-100">
+            <a href="#getstarted" class="btn btn-danger btn-xl js-scroll-trigger">Continue</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="getstarted" class="cta">
+      <div class="cta-content">
+        <div class="container">
+          <h2>Be smart.<br>Be safe.</h2>
+          <a href="/signup" class="btn btn-outline btn-xl js-scroll-trigger">Get HardPass</a>
+          <br>
+          <br>
+          <a href="#pricing" class="btn btn-outline btn-xl js-scroll-trigger">Learn About Features</a>
+        </div>
+      </div>
+      <div class="overlay"></div>
+    </section>
+
+    <section id="pricing" class="features">
+      <div class="container">
+        <div class="section-heading text-center">
+          <h2>Features</h2>
+          <p class="text-muted">HardPass is customizable to your unique security, deployability, and software needs.</p>
+          <hr>
+        </div>
+        <div class="row">
+          {% include 'pricing.html' %}
+        </div>
+      </div>
+    </section>
+
+
+
+
+{% endblock %}

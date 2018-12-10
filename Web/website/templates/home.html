@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="home-container container">
+    <div class="row">
+      <div class="col-lg-2">
+      </div>
+      <div class="col-lg-8 home-dashboard-container">
+        <div class="card">
+            <div class="card-body">
+                <h2>Chrome Extension</h2>
+                <a href="">Click here to download the Google Chrome extension for HardPass</a>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-body">
+                <h2>Dashboard</h2>
+                <table class="dataTable stripe">
+                    <thead>
+                        <tr>
+                            <th>Website</th>
+                            <th>Date Created</th>
+                            <th>Keyboard Mapping</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for km in keyboard_mappings %}
+                        <tr>
+                            <td>{{ km.website }}</td>
+                            <td>{{ km.created }} </td>
+                            <td>{{ mappings[loop.index0] }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+      <div class="col-lg-2">
+      </div>
+    </div>
+</div>
+
+{% endblock %}
