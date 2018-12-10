@@ -20,3 +20,6 @@ python install_keyboard.py hardpass.klc
 
 Finally, restart your computer.  Your HardPass keyboard will now appear in the dropdown list of keyboards!
 
+## Troubleshooting
+
+If the above process doesn't work for any reason, try downloading Microsoft Keyboard Layout Creator 1.4 (https://www.microsoft.com/en-us/download/details.aspx?id=22339), and then follow the steps above.
